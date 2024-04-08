@@ -1,0 +1,48 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000;
+    padding-top: 20px;
+    background-image: url('http://localhost:8888/Data/photos/ABQOT.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-color: #dd2323;*/
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000;
+    background-color: #844040b1;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000;
+    background-color: rgb(209, 56, 56);
+   
+  }
+  

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://localhost:8888/myCSS_styleFiles/UNM_Page.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+   /* .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) 
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height 
+    .sidenav {
+      padding-top: 20px;
+      background-color: #dd2323;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding 
+    footer {
+      background-color: #3b3939;
+      color: rgb(188, 29, 29);
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid 
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }*/
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:8888/Code/485LPersonalWeb.html">Home</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <button onclick="buttonClicked ('https://www.unm.edu/')"style="background:none; border:none; padding:0; display:block;">
+      <p><a href="#">University of New Mexico Home page</a></p>
+    </button>
+      <!--<p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>-->
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <p>This web application was developed as part of a group assignment for an interactive 
+        web mapping class hosted by the University of New Mexico. The purpose of this assignment 
+        was to demonstrate compitence in subject material coverd througout the course and to highlight 
+        a peritnant issue regarding food accessability for native populations throughout the state of New 
+        Mexico.
+    </p>
+      <hr>
+      <h3>Test</h3>
+      <div id="mapId" style="height: 300px;"></div>
+
+      <!--<p>Lorem ipsum...</p>-->
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <button onclick="buttonClicked('https://www.unm.edu/')"style="background:none; border:none; padding:0; display:block;">
+        <p>My Web App</p>
+    </button>
+      </div>
+      <div class="well">
+        <button onclick="buttonClicked('https://www.unm.edu/')"style="background:none; border:none; padding:0; display:block;">
+        <p>Other GIS Projects</p>
+    </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+<script src="http://localhost:8888/myJS_scripts/UNM_Page.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script>
+    var map = L.map('mapId').setView([-106.6197, 35.0839], 12);
+    var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+      maxZoom: 16
+    });
+    Esri_NatGeoWorldMap.addTo(map);
+  </script>
+  
+
+
+</body>
+</html>

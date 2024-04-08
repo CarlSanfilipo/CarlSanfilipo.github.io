@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Link to External CSS File -->
+  <link rel="stylesheet" href="http://localhost:8888/JS_CSS_downloaded_libraries/HomePage.css">
+</head>
+<body>
+
+<script>
+function buttonClicked(url) {
+  window.location.href = url;
+}
+</script>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="btn btn-default" href="#" role="button">Home</a></li>
+        <!--<li><a class="btn btn-default" href="about.html" role="button">About</a></li>
+        <li><a class="btn btn-default" href="gallery.html" role="button">Gallery</a></li>
+        <li><a class="btn btn-default" href="contact.html" role="button">Contact</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn btn-default" href="login.html" role="button"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron">
+    <video autoplay muted loop id="myVideo">
+      <source src="http://localhost:8888/Data/photos/BonesTotheWest.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    
+    <div class="container text-center">
+      <h1>Carl C. Sanfilipo</h1>      
+      <p>GEOG 485L Personal Website (WIP)</p>
+    </div>
+  </div>
+  
+  
+<div class="container-fluid bg-3 text-center">    
+    <h3>My Experience</h3><br>
+    <div class="row">
+      <div class="col-sm-3">
+        <button onclick="buttonClicked('http://localhost:8888/Code/ConservationandFirePrevention.html')" style="background:none; border:none; padding:0; display:block;">
+          <p>Conservation and Fire Prevention</p>
+          <img src="http://localhost:8888/Data/photos/CerroMontoso.jpg" class="img-responsive" style="width:100%" alt="Image 1">
+        </button>
+      </div>
+      <div class="col-sm-3"> 
+        <button onclick="buttonClicked('https://www.cabq.gov/artsculture/biopark/garden/exhibits/rio-grande-heritage-farm')" style="background:none; border:none; padding:0; display:block;">
+          <p>New Mexico Department of Arts and Culture</p>
+          <img src="http://localhost:8888/Data/photos/K%27os.jpg" class="img-responsive" style="width:100%" alt="Image 2">
+        </button>
+      </div>
+      <div class="col-sm-3"> 
+        <button onclick="buttonClicked('https://sites.google.com/view/erimipitharka')" style="background:none; border:none; padding:0; display:block;">
+          <p>University of Graz: Erimi-Pitharka, Cyprus Excavation</p>
+          <img src="http://localhost:8888/Data/photos/EP23jpg.jpg" class="img-responsive" style="width:100%" alt="Image 3">
+        </button>
+      </div>
+      <div class="col-sm-3">
+        <button onclick="buttonClicked('http://localhost:8888/Code/MyWebApp.html')" style="background:none; border:none; padding:0; display:block;">
+          <p>My Web App</p>
+          <img src="http://localhost:8888/Data/photos/unm.jpg" class="img-responsive" style="width:100%" alt="Image 4">
+          </button>
+     </div>
+    </body>
+    </html>

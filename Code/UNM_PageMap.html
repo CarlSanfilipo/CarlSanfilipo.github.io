@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src= "Bike_Thefts_sample.js"></script>
+  <style>
+    #mapId{ width: 900px; height: 500px; }
+  </style>
+</head>
+<body>
+
+  <div id="mapId"></div>
+
+  <script>
+
+  /* initialize the map. 
+  setView method: Sets the view of the map (geographical center and zoom) with the given animation options.
+
+  setView( <LatLng> center, <Number> zoom?, <zoom/pan options> options? )
+  */
+  
+  var map = L.map('mapId').setView([-107.3184, -55.1726], 12);
+
+  //replace the code below from the Plain JavaScript from the map style you choose
+  //at http://leaflet-extras.github.io/leaflet-providers/preview/
+
+  var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
+});
+  
+  //change the varialbe "OpenTopoMap" according to the map style you choose
+  //It is the varialbe between "var" and "= L.titleLayer(..."  in Line 28 in this script
+  Esri_NatGeoWorldMap.addTo(map);
+
+  L.geoJSON(bikeThefts, {
+    onEachFeature: addPopups
+  }) .addTo(map);
+
+  </script>
+</body>
+</html>
